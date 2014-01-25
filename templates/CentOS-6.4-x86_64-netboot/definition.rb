@@ -32,7 +32,7 @@ Veewee::Session.declare({
     "vagrant.sh",
     "virtualbox.sh",
     #"kvm.sh",
-    #"vmfusion.sh",
+    "vmfusion.sh",
     "cleanup.sh",
     "zerodisk.sh"
   ],

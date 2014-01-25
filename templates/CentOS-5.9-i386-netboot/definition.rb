@@ -35,7 +35,7 @@ Veewee::Session.declare({
     "puppet.sh",
     "vagrant.sh",
     "virtualbox.sh",
-    #"vmfusion.sh",
+    "vmfusion.sh",
     "cleanup.sh",
     "zerodisk.sh"
   ],
