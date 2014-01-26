@@ -7,7 +7,7 @@ if test -f .vbox_version ; then
 
   # Installing the virtualbox guest additions
   apt-get -y install dkms
-  VBOX_VERSION=$(cat /home/vagrant/.vbox_version)
+  VBOX_VERSION=$(cat .vbox_version)
   mount -o loop VBoxGuestAdditions_$VBOX_VERSION.iso /mnt
   sh /mnt/VBoxLinuxAdditions.run
   umount /mnt

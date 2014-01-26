@@ -1,9 +1,9 @@
 #Installing the virtualbox guest additions
-FILE_VBOX_VERSION=/home/vagrant/.vbox_version
+FILE_VBOX_VERSION=.vbox_version
 
 if test -f $FILE_VBOX_VERSION
 then
-  VBOX_VERSION=$(cat /home/vagrant/.vbox_version)
+  VBOX_VERSION=$(cat .vbox_version)
   if test -f VBoxGuestAdditions_$VBOX_VERSION.iso
   then
     cp VBoxGuestAdditions_$VBOX_VERSION.iso /tmp

@@ -1,8 +1,12 @@
-# Installing the virtualbox guest additions
+if test -f .vbox_version ; then
 
-VBOX_VERSION=$(cat /home/veewee/.vbox_version)
-cd /tmp
-mount -o loop /home/veewee/VBoxGuestAdditions_$VBOX_VERSION.iso /mnt
-sh /mnt/VBoxLinuxAdditions.run
-umount /mnt
-rm -rf /home/veewee/VBoxGuestAdditions_*.iso
+  # Installing the virtualbox guest additions
+  VBOX_VERSION=$(cat .vbox_version)
+  mount -o loop VBoxGuestAdditions_$VBOX_VERSION.iso /mnt
+  cd /tmp
+  sh /mnt/VBoxLinuxAdditions.run
+  umount /mnt
+  cd 
+  rm -rf VBoxGuestAdditions_*.iso
+
+fi
